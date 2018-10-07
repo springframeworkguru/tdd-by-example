@@ -3,7 +3,7 @@ package guru.springframework;
 /**
  * Created by jt on 2018-10-04.
  */
-public class Dollar {
+public class Dollar extends Money {
 
     private int amount;
 

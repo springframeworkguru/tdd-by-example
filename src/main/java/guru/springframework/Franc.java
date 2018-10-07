@@ -3,7 +3,7 @@ package guru.springframework;
 /**
  * Created by jt on 2018-10-05.
  */
-public class Franc {
+public class Franc extends Money {
     private int amount;
 
     public Franc(int amount) {
