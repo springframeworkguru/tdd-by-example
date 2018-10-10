@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  * Created by jt on 2018-10-04.
  */
-public class MoneyTest {
+class MoneyTest {
 
     @Test
     void testMultiplication() {
@@ -82,7 +82,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testMixedAddition() {
+    void testMixedAddition() {
         Expression fiveBucks = Money.dollar(5);
         Expression tenFrancs = Money.franc(10);
         Bank bank = new Bank();
@@ -92,7 +92,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testSumPlusMoney() {
+    void testSumPlusMoney() {
         Expression fiveBucks = Money.dollar(5);
         Expression tenFrancs = Money.franc(10);
         Bank bank = new Bank();
@@ -103,7 +103,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testSumTimes() {
+    void testSumTimes() {
         Expression fiveBucks = Money.dollar(5);
         Expression tenFrancs = Money.franc(10);
         Bank bank = new Bank();

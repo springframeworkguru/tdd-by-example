@@ -5,12 +5,12 @@ import java.util.Objects;
 /**
  * Created by jt on 10/10/18.
  */
-public class Pair {
+class Pair {
 
     private final String from;
     private final String to;
 
-    public Pair(String from, String to) {
+    Pair(String from, String to) {
         this.from = from;
         this.to = to;
     }

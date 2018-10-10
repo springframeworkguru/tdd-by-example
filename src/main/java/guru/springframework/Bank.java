@@ -5,9 +5,9 @@ import java.util.HashMap;
 /**
  * Created by jt on 2018-10-07.
  */
-public class Bank {
+class Bank {
 
-    private HashMap<Pair, Integer> rateMap = new HashMap<>();
+    private final HashMap<Pair, Integer> rateMap = new HashMap<>();
 
     Money reduce(Expression source, String toCurrency) {
         return source.reduce(this, toCurrency);
