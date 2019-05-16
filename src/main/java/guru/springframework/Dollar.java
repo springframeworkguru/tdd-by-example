@@ -9,7 +9,6 @@ public class Dollar {
 
     void times(int multiplier){
         amount *= multiplier;
-
     }
 
     public int getAmount() {
