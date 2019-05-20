@@ -1,32 +1,19 @@
 package guru.springframework;
 
-public class Dollar {
-    private int amount;
+public class Dollar extends Money {
 
-    public Dollar(int amount) {
-        this.amount = amount;
-    }
-
-    public Dollar times(int multiplier){
-        return new Dollar(amount * multiplier);
+    public Dollar(int amount, String currency) {
+        super(amount, currency);
 
     }
 
-    public int getAmount() {
-        return amount;
+
+    public Money times(int multiplier){
+        return Money.dollar(amount * multiplier);
+
     }
 
-    public boolean equals(Object object) {
-        if (object == null) {
-            return false;
-        } else if (object.getClass() != this.getClass()) {
-            return false;
-        }
 
-        Dollar other = (Dollar) object;
-        if (amount == other.getAmount()) {
-            return true;
-        }
-        return false;
-    }
+
+
 }

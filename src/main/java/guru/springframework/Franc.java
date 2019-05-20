@@ -1,21 +1,19 @@
 package guru.springframework;
 
-public class Franc {
-    private int amount;
+public class Franc extends Money{
 
-    public Franc(int amount) {
-        this.amount = amount;
+    public Franc(int amount, String currency) {
+        super(amount, currency);
+;    }
+
+
+    public Money times(int multiplier){
+        return Money.franc(amount * multiplier);
+
     }
 
-    public Franc times(int multiplier){
-        return new Franc(amount * multiplier);
 
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
+    /*
     public boolean equals(Object object) {
         if (object == null) {
             return false;
@@ -29,4 +27,6 @@ public class Franc {
         }
         return false;
     }
+
+    */
 }
