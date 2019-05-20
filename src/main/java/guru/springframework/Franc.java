@@ -1,14 +1,14 @@
 package guru.springframework;
 
-public class Dollar {
+public class Franc {
     private int amount;
 
-    public Dollar(int amount) {
+    public Franc(int amount) {
         this.amount = amount;
     }
 
-    public Dollar times(int multiplier){
-        return new Dollar(amount * multiplier);
+    public Franc times(int multiplier){
+        return new Franc(amount * multiplier);
 
     }
 
@@ -23,7 +23,7 @@ public class Dollar {
             return false;
         }
 
-        Dollar other = (Dollar) object;
+        Franc other = (Franc) object;
         if (amount == other.getAmount()) {
             return true;
         }
