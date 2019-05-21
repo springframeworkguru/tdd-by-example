@@ -1,6 +1,6 @@
 package guru.springframework;
 
-public abstract class Money {
+public class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -14,29 +14,59 @@ public abstract class Money {
     };
 
     public static Money dollar (int amount) {
-        return new Dollar(amount, "USD");
+        return new Money(amount, "USD");
     }
 
     public static Money franc (int amount) {
-        return new Franc(amount, "CHF");
+        return new Money(amount, "CHF");
     }
     public int getAmount() {
         return amount;
     }
 
-    public abstract Money times(int multiplier);
+    @Override
+    public Expression times(int multiplier){
+        return new Money(amount * multiplier, this.currency);
+
+    }
 
     public boolean equals(Object object) {
         if (object == null) {
             return false;
-        } else if (object.getClass() != this.getClass()) {
+        }
+        Money other = (Money) object;
+
+        if (this.currency != other.getCurrency()) {
             return false;
         }
 
-        Money other = (Money) object;
+
         if (amount == other.getAmount()) {
             return true;
         }
         return false;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    @Override
+    public Expression plus(Expression addend){
+        return  new Sum(this, addend);
+
+    }
+
+    @Override
+    public Money reduce(Bank bank, String to) {
+        int rate = (currency.equals("CHF") && to.equals("USD") ? 2 : 1);
+        return new Money(amount / bank.rate(this.currency, to), to);
+    }
+    @Override
+    public String toString() {
+        return "Money{" +
+                "amount=" + amount +
+                ", currency='" + currency + '\'' +
+                '}';
     }
 }
