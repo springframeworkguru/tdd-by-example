@@ -24,6 +24,10 @@ public class Money implements Expression {
                 && this.currency == ((Money) object).currency;
     }
 
+    public void halloKnoppers(){
+        System.out.println("Hallo Knoppers");
+    }
+
     @Override
     public String toString() {
         return "Money{" +
