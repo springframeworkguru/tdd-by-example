@@ -23,6 +23,11 @@
             <name>John Thompson</name>
             <email>john@springframework.guru</email>
         </developer>
+        <developer>
+            <id>hd</id>
+            <name>Hansel Donizete</name>
+            <email>hansel.donizete@gmail.com</email>
+        </developer>
     </developers>
 
     <inceptionYear>2018</inceptionYear>
@@ -55,6 +60,12 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit-platform.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
