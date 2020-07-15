@@ -2,7 +2,7 @@ package guru.springframework;
 
 public class Dollar {
 
-    private int amount;
+    int amount;
 
     public Dollar(int amount) {
         this.amount = amount;
