@@ -26,7 +26,4 @@ public class Pair {
 		return Objects.equals(from, pair.from) &&
 				Objects.equals(to, pair.to);
 	}
-	
-	
-	
 }
