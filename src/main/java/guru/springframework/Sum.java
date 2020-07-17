@@ -1,8 +1,8 @@
 package guru.springframework;
 
 public class Sum implements Expression {
-	Expression augmend;
-	Expression addmend;
+	public final Expression augmend;
+	public final Expression addmend;
 	
 	public Sum(Expression augmend, Expression addmend) {
 		this.augmend = augmend;
