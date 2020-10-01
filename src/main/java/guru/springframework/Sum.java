@@ -4,16 +4,16 @@ package guru.springframework;
  * Created by jt on 10/10/18.
  */
 public class Sum implements Expression {
-    Money augmend;
-    Money addmend;
+    Money augend;
+    Money addend;
 
-    public Sum(Money augmend, Money addmend) {
-        this.augmend = augmend;
-        this.addmend = addmend;
+    public Sum(Money augend, Money addend) {
+        this.augend = augend;
+        this.addend = addend;
     }
 
     public Money reduce(String to) {
-        int amount = augmend.amount + addmend.amount;
+        int amount = augend.amount + addend.amount;
         return new Money(amount, to);
     }
 }
