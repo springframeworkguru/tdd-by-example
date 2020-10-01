@@ -8,8 +8,8 @@ public class Sum implements Expression {
     Money addmend;
 
     public Sum(Money augmend, Money addmend) {
-        this.augmend = augmend;
-        this.addmend = addmend;
+        this.augend = augmend;
+        this.addend = addmend;
     }
 
     public Money reduce(String to) {
