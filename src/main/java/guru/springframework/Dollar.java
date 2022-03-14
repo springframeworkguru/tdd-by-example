@@ -1,8 +1,6 @@
 package guru.springframework;
 
-/**
- * Created by jt on 2018-10-04.
- */
+
 public class Dollar {
 
     int amount;
