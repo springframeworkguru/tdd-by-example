@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class MoneyTest {
 //TODO on Dell 16, Project Structure was running Java 17. Had to be rolled back to Java 11 to avoid warnings
+//Dell 16, Project Structure was running Java 17. Had to be rolled back to Java 11 to avoid warnings
     @Test
     void testMultiplicationFranc(){
         Franc five = new Franc(5);
