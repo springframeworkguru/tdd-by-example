@@ -1,7 +1,7 @@
 package guru.springframework;
 
 public class Dollar extends Money{
-    private int amount;
+    // private int amount; This was transfer to the Money class because of inheritance
     public Dollar(int amount){
         this.amount = amount;
     }
@@ -11,7 +11,7 @@ public class Dollar extends Money{
     }
 
     public boolean equals(Object object){
-        Dollar dollar = (Dollar) object;
+        Money dollar = (Money) object;
         return amount == dollar.amount;
     }
 }
