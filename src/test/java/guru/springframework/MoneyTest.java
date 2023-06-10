@@ -46,7 +46,7 @@ public class MoneyTest {
         Expression result = five.plus(five);
         Sum sum = (Sum) result;
         assertEquals(five,sum.augend);
-        assertEquals(five,sum.addend);
+        assertEquals(five,sum.addmend);
     }
 
     @Test
@@ -76,6 +76,16 @@ public class MoneyTest {
     void testIdentityRate() {
         assertEquals(1,new Bank().rate("USD","USD"));
         assertEquals(1,new Bank().rate("CHF","CHF"));
+    }
+
+    @Test
+    void testMixedAddition() {
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFranks = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF","USD",2);
+        Money result = bank.reduce(((Money) fiveBucks).plus((Money) tenFranks),"USD");
+        assertEquals(Money.dollar(10),result);
     }
 
 }
