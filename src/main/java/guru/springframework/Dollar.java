@@ -6,7 +6,7 @@ public class Dollar {
     public Dollar(int amount) {
         this.amount=amount;
     }
-    void times(int multiplyBy){
-        amount*=multiplyBy;
+    Dollar times(int multiplyBy){
+        return new Dollar(amount*multiplyBy);
     }
 }
