@@ -10,7 +10,8 @@ public class Money {
 
     public boolean equals(Object object){
         Money testObject =(Money) object;
-        return testObject.amount == amount;
+        return testObject.amount == amount
+                && getClass().equals(testObject.getClass());
     }
 
     Money times(int multiplyBy){
