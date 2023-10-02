@@ -10,8 +10,6 @@ public abstract class Money {
         this.currency=currency;
     }
 
-
-
     protected String currency(){
         return currency;
     };
@@ -19,10 +17,13 @@ public abstract class Money {
     public boolean equals(Object object){
         Money testObject =(Money) object;
         return testObject.amount == amount
-                && getClass().equals(testObject.getClass());
+                && this.currency==testObject.currency;
     }
 
-    public abstract Money times(int multiplyBy);
+    public Money times(int multiplyBy) {
+        return Money.dollar(amount*multiplyBy);
+
+    }
 
     public static Money dollar(int amount){
         return new Dollar(amount,"USD");
@@ -30,5 +31,13 @@ public abstract class Money {
 
     public static Money franc(int amount){
         return new Franc(amount,"CHF");
+    }
+
+    @Override
+    public String toString() {
+        return "Money{" +
+                "amount=" + amount +
+                ", currency='" + currency + '\'' +
+                '}';
     }
 }

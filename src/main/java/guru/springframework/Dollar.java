@@ -5,9 +5,4 @@ public class Dollar extends Money{
         super(amount,currency);
     }
 
-    @Override
-    public Money times(int multiplyBy) {
-        return Money.dollar(super.amount*multiplyBy);
-
-    }
 }

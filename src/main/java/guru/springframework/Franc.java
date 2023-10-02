@@ -5,9 +5,4 @@ public class Franc extends Money{
         super(amount,currency);
     }
 
-    @Override
-    public Money times(int multiplyBy) {
-        return Money.franc(super.amount*multiplyBy);
-
-    }
 }

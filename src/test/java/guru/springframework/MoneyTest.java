@@ -31,4 +31,6 @@ public class MoneyTest {
         assertEquals("CHF",Money.franc(1).currency());
     }
 
+
+
 }
