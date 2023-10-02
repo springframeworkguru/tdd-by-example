@@ -15,4 +15,10 @@ public class MoneyTest {
 
     }
 
+    @Test
+    void testEquality(){
+        assertEquals(false,new Dollar(1).equals(new Dollar(2)));
+        assertEquals(true,new Dollar(1).equals(new Dollar(1)));
+    }
+
 }
